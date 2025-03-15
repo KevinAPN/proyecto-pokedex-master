@@ -1,0 +1,70 @@
+:root {
+  --primary-color: #ffcc00; /* Amarillo Pokémon */
+  --secondary-color: #ff3e3e; /* Rojo Pokébola */
+  --dark-primary: #b8860b; /* Amarillo más oscuro */
+  --dark-secondary: #8b0000; /* Rojo oscuro */
+  --text-light: #ffffff;
+  --text-dark: #000000;
+  --background-light: #f8f8f8;
+  --background-dark: #222831;
+}
+
+/* Establece la altura mínima para ocupar toda la pantalla */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Asegura que el contenido principal se expanda */
+.main-content {
+  flex: 1;
+}
+
+/*Dark Mode*/
+.dark-mode {
+  background-color: var(--background-dark);
+  color: var(--text-light);
+}
+
+.light-mode {
+  background-color: var(--background-light);
+  color: var(--text-dark);
+}
+
+/*colores*/
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--dark-primary);
+  color: var(--text-dark);
+}
+
+.btn-primary:hover {
+  background-color: var(--dark-primary);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: var(--secondary-color) !important;
+}
+
+.nav-link {
+  color: var(--text-dark) !important;
+}
+
+.dark-mode .nav-link {
+  color: var(--text-light) !important;
+}
+
+/*estilos para el boton darkmode*/
+.navbar-nav .nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .btn {
+  height: 36px;
+  display: flex;
+  align-items: center;
+}
