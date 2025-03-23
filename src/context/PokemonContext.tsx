@@ -9,7 +9,7 @@ interface PokemonContextProps {
     error?: Error;
 }
 
-// Creamos el contexto con valores por defecto
+// Creacion del contexto con valores por defecto
 const PokemonContext = createContext<PokemonContextProps | undefined>(undefined);
 
 export const PokemonProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {

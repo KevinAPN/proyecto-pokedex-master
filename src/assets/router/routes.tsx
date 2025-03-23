@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from '../../pages/Home';
-import PokedexPage from '../../pages/Pokedex'; // Página con la lista de Pokémon
+import PokedexPage from '../../pages/Pokedex';
 import PokemonDetails from '../../pages/PokemonDetails';
 import About from '../../pages/About';
 import NotFound from '../../pages/NotFound';

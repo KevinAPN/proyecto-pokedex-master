@@ -17,6 +17,14 @@ export const GET_POKEMONS = gql`
           name
         }
       }
+      pokemon_v2_pokemonstats {
+        base_stat
+        effort
+        pokemon_v2_stat {
+          name
+        }
+      }
     }
   }
 `;
+

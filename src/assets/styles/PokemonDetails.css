@@ -1,0 +1,87 @@
+:root {
+    --primary-color: #ffcc00;
+    /* Amarillo Pokémon */
+    --secondary-color: #ff3e3e;
+    /* Rojo Pokébola */
+    --accent-color: #3b4cca;
+    /* Azul de Pokémon, para botones o detalles */
+    --background-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --card-background: rgba(255, 255, 255, 0.9);
+    --card-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    --border-radius: 12px;
+}
+
+/* Estilos para el contenedor de detalles */
+.pokemon-details-container {
+    background: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    padding: 2rem;
+    margin-top: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Fondo general de la página (opcional: un degradado) */
+body,
+.light-mode {
+    background: var(--background-gradient);
+}
+
+/* Título */
+.pokemon-details-container h1 {
+    color: var(--accent-color);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen centrada y con borde */
+.pokemon-details-container img {
+    max-width: 200px;
+    display: block;
+    margin: 0 auto 1rem;
+    border: 4px solid var(--primary-color);
+    border-radius: var(--border-radius);
+}
+
+/* Información general */
+.pokemon-details-container p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Listas para tipos, habilidades y estadísticas */
+.pokemon-details-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pokemon-details-container li {
+    background: var(--primary-color);
+    color: var(--text-dark);
+    margin: 0.3rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Estilos para modo oscuro */
+.dark-mode .pokemon-details-container {
+    background: rgba(34, 34, 34, 0.9);
+}
+
+.dark-mode .pokemon-details-container h1 {
+    color: var(--primary-color);
+}
+
+.dark-mode .pokemon-details-container li {
+    background: var(--accent-color);
+    color: var(--text-light);
+}

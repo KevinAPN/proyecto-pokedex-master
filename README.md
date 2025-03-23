@@ -1,54 +1,103 @@
-# React + TypeScript + Vite
+# Pokédex - Aplicación React con GraphQL
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta es una aplicación de Pokédex desarrollada en React utilizando Vite y TypeScript. La aplicación consume datos de la PokéAPI mediante GraphQL (usando Apollo Client) y utiliza Bootstrap para los estilos. Además, cuenta con navegación mediante React Router, modo oscuro/claro y funcionalidades de búsqueda y filtrado.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Pantalla principal (Home):** Página de bienvenida con un enlace a la Pokédex.
+- **Listado de Pokémon (Pokédex):** Muestra una lista paginada de Pokémon con búsqueda y filtros por nombre, tipo, peso y altura.
+- **Detalles de Pokémon:** Al seleccionar un Pokémon, se muestran sus detalles, incluyendo:
+  - Nombre, imagen, altura y peso (con conversión de unidades).
+  - Tipos, habilidades y estadísticas de combate.
+- **Modo Oscuro/Claro:** Permite alternar entre temas en tiempo real.
+- **Responsive:** Interfaz adaptada a dispositivos móviles.
 
-## Expanding the ESLint configuration
+## Instalación
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Requisitos Previos
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- [Node.js](https://nodejs.org/) (versión LTS recomendada)
+- [npm](https://www.npmjs.com/) o [yarn](https://yarnpkg.com/)
+
+### Clonar el Repositorio
+
+```bash
+git clone https://github.com/tu-usuario/tu-repositorio.git
+cd tu-repositorio
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Instalar Dependencias
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Ejecuta el siguiente comando para instalar todas las dependencias:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install
 ```
+
+Las dependencias principales son:
+
+- **React** y **React DOM**
+- **Vite** (para desarrollo y compilación)
+- **TypeScript** (para tipado estricto)
+- **Bootstrap** (para estilos y responsividad)
+- **React Router DOM** (para navegación)
+- **@apollo/client** y **graphql** (para consumir la API GraphQL de PokéAPI)
+
+*Nota:* La versión actual de React y React DOM en el proyecto deben ser compatibles. Además, para React Router DOM no es necesario instalar `@types/react-router-dom` si la versión instalada ya lo incluye.
+
+## Uso
+
+### Ejecutar en Modo Desarrollo
+
+```bash
+npm run dev
+```
+
+Abre [http://localhost:5173/](http://localhost:5173/) en tu navegador para ver la aplicación.
+
+### Compilar para Producción y Previsualizar
+
+```bash
+npm run build
+npm run preview
+```
+
+## Estructura del Proyecto
+
+La estructura actual del proyecto es la siguiente:
+
+```
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json
+├── README.md
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+├── vite.config.ts
+├── public/
+│   └── vite.svg
+└── src/
+    ├── App.css
+    ├── App.tsx
+    ├── index.css
+    ├── main.tsx
+    ├── components/
+    ├── pages/
+    ├── hooks/
+    ├── assets/
+    ├── utils/
+    ├── routes/
+```
+
+## Autor
+
+Desarrollado por [KevinAPN MS-Ospina y utadluis].
+
+
+Contribución
+Si deseas contribuir, por favor clona el repositorio, crea una rama nueva y realiza tus cambios. Luego, envía un Pull Request con una descripción de tus modificaciones.
+
+Licencia
+Este proyecto se distribuye bajo la licencia MIT.
