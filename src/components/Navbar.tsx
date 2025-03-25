@@ -8,7 +8,15 @@ const Navbar: React.FC = () => {
     return (
         <nav className={`navbar navbar-expand-lg ${theme === "dark" ? "bg-dark" : "bg-warning"}`}>
             <div className="container">
-                <Link className="navbar-brand" to="/">Pokédex</Link>
+                <Link className="navbar-brand d-flex align-items-center" to="/">
+                    <img 
+                        src="https://cdn-icons-png.flaticon.com/512/2094/2094510.png" 
+                        alt="Pokédex Logo" 
+                        className="pokedex-icon"
+                    />
+                    <span className="ms-2">Pokédex</span>
+                </Link>
+                
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span className="navbar-toggler-icon"></span>
                 </button>
