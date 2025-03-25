@@ -126,3 +126,11 @@ body,
 .dark-mode .pokemon-details-container li {
     color: var(--text-light);
 }
+
+
+h1 {
+    color: black;
+}
+p {
+    color: black;
+}

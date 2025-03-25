@@ -32,7 +32,7 @@ const Pokedex: React.FC = () => {
 
     return (
         <div className="container mt-5">
-            <h1 className="mb-4">Pokédex</h1>
+            <h1 className="mb-4 text-warning fw-bold text-shadow text-lowercase">Pokédex</h1>
             <SearchBar onSearch={handleSearch} />
             <Filter onFilterChange={handleFilterChange} />
             {filteredPokemons.length === 0 ? (

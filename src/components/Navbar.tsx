@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
 
 const Navbar: React.FC = () => {
+
     const { theme, toggleTheme } = useTheme();
 
     return (
@@ -32,8 +33,13 @@ const Navbar: React.FC = () => {
                             <Link className="nav-link" to="/about">Acerca de</Link>
                         </li>
                         <li className="nav-item">
-                            <button className="btn btn-outline-light d-flex align-items-center py-1 px-3" style={{ backgroundColor: theme === "dark" ? "var(--dark-primary)" : "var(--primary-color)", color: "black" }} onClick={toggleTheme}>
-                                {theme === "dark" ? "Modo Claro" : "Modo Oscuro"}
+                            <button className="btn btn-outline-light d-flex align-items-center py-1 px-3" 
+
+                            style={{ backgroundColor: theme === "dark" ? "var(--dark-primary)" : "var(--primary-color)", 
+                                
+                            color: "black" }} onClick={toggleTheme}>
+                                {theme === "dark" ? "Modo Oscuro" : "Modo Claro"}
+
                             </button>
                         </li>
                     </ul>
