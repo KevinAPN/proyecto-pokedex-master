@@ -85,3 +85,11 @@ body,
     background: var(--accent-color);
     color: var(--text-light);
 }
+
+
+h1 {
+    color: black;
+}
+p {
+    color: black;
+}
