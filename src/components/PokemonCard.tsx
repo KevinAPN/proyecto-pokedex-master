@@ -12,7 +12,8 @@ const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon }) => {
 
     return (
         <div className="card m-2" style={{ width: "18rem" }}>
-            <img src={imageUrl} className="card-img-top" alt={pokemon.name} />
+            <img src={imageUrl} className="card-img-top img-fluid" alt={pokemon.name} />
+
             <div className="card-body">
                 <h5 className="card-title text-capitalize">{pokemon.name}</h5>
                 <p className="card-text">Altura: {formatHeight(pokemon.height)}</p>
