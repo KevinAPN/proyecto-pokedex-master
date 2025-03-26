@@ -49,7 +49,7 @@ const PokemonDetails: React.FC = () => {
                 
                 <div className="col-md-6">
                     <div className="pokemon-stats p-3">
-                   
+                    
                     <div className="row">
                         <div className="col-5">
                             <div className="stat-box">

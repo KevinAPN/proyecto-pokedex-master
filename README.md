@@ -22,8 +22,8 @@ Esta es una aplicación de Pokédex desarrollada en React utilizando Vite y Type
 ### Clonar el Repositorio
 
 ```bash
-git clone https://github.com/tu-usuario/tu-repositorio.git
-cd tu-repositorio
+git clone https://github.com/KevinAPN/proyecto-pokedex-master.git
+cd proyecto-pokedex-master
 ```
 
 ### Instalar Dependencias
